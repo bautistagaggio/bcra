@@ -4,7 +4,7 @@ class TestData:
         'Badlar': 'http://www.bcra.gov.ar/PublicacionesEstadisticas/Principales_variables_datos.asp?serie=1222&detalle=BADLAR%20en%20pesos%20de%20bancos%20privados%20(en%20%%20n.a.)'    
         }
         
-        Serie = 'A3500'
+        Serie = 'Badlar'
         FechaDesde = ['4','7', '2020']
         FechaHasta = ['2','6', '2021']
 
