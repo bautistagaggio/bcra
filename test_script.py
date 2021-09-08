@@ -6,7 +6,7 @@ import pytest
 import schedule
 import time
 
-# pepe
+# git config --global http.sslverify "false"  / para pushear al repo
 # correr: pytest test_script.py::Test_Script::test_generate_excel
 
 @pytest.mark.usefixtures('info_logging')
@@ -23,7 +23,7 @@ class Test_Script(BaseTest):
     def export_values(self):
         
         Dat = self.BCRApage.get_table_data()
-        if Dat is True:
+        if Dat:
             wb = openpyxl.Workbook()
             ws = wb.active
             for data in zip(Dat):
