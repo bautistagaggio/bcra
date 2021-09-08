@@ -6,6 +6,9 @@ import pytest
 import schedule
 import time
 
+
+# correr: pytest test_script.py::Test_Script::test_generate_excel
+
 @pytest.mark.usefixtures('info_logging')
 class Test_Script(BaseTest):
 
@@ -16,8 +19,6 @@ class Test_Script(BaseTest):
         self.BCRApage.SendDateHasta()
         self.export_values()
     
-
-
 
     def export_values(self):
         
