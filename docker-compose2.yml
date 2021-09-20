@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+  hub:
+    image: selenium/hub:3.141.0
+    ports:
+      - 4444:4444
+
+  chrome:
+    image: selenium/node-chrome:3.141.0
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+
+  firefox:
+    image: selenium/node-firefox:3.141.0
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
