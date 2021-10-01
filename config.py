@@ -9,6 +9,7 @@ class TestData:
         FechaHasta = ['2','6', '2021']
 
         Headless ="Off"
+        CHROME_EXECUTABLE_PATH = "chromedriver"
 
         
     

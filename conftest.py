@@ -11,12 +11,14 @@ import os
 @pytest.fixture(params=["chrome"], scope="class")
 def init_driver(request):
     if request.param == "chrome":
-        chrome_driver = ChromeDriverManager().install()
+        # chrome_driver = ChromeDriverManager().install()
+        # chrome_driver = webdriver.Chrome(executable_path=TestData.CHROME_EXECUTABLE_PATH)
         if TestData.Headless == "On":   
             options = Options()
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
-            web_driver = webdriver.Chrome(chrome_driver, options=options)
+            # web_driver = webdriver.Chrome(chrome_driver, options=options)
+            web_driver = webdriver.Chrome(executable_path=TestData.CHROME_EXECUTABLE_PATH)
         else:
             # web_driver = webdriver.Chrome(chrome_driver)
             caps = {'browserName': os.getenv('BROWSER', 'chrome')}

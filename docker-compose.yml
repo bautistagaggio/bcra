@@ -44,6 +44,3 @@ services:
       - "9002:5900"
     links:
       - hub
-
-
-# http://localhost:4444/grid/console
